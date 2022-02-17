@@ -1,6 +1,6 @@
 #include "fecha.h"
 
-fecha::fecha()
+Fecha::Fecha()
 {
 
 }

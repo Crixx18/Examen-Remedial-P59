@@ -14,3 +14,6 @@ HEADERS += \
     fecha.h \
     tarea.h \
     tareas_ventana.h
+
+FORMS += \
+    tareas_ventana.ui

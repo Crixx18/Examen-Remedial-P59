@@ -2,15 +2,32 @@
 #define TAREAS_VENTANA_H
 
 #include <QMainWindow>
-#include <QWidget>
+#include <QFile>
+#include <QDebug>
+#include <QMessageBox>
 
-class tareas_ventana : public QWidget
+QT_BEGIN_NAMESPACE
+namespace Ui { class Tareas; }
+QT_END_NAMESPACE
+
+class Tareas : public QMainWindow
 {
+    Q_OBJECT
+
 public:
-    explicit tareas_ventana(QWidget *parent = nullptr);
+    Tareas(QWidget *parent = nullptr);
+    ~Tareas();
+    void updateUI();
 
-signals:
+private slots:
+    void on_actionAgregar_triggered();
+    void on_actionEliminar_triggered();
+    void on_actionModificar_triggered();
+    void on_actionSalir_triggered();
 
+private:
+    Ui::Tareas *ui;
+    void clean();
 };
 
-#endif // TAREAS_VENTANA_H
+#endif // LOGIN_H
