@@ -22,4 +22,5 @@ FORMS += \
     tareas_ventana.ui
 
 RESOURCES += \
-    res.qrc
+    res.qrc \
+    traducciones.qrc

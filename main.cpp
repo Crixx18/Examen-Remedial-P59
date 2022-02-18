@@ -22,7 +22,8 @@ int main(int argc, char *argv[]) {
                                                        "Seleccione un idioma/Select a language",
                                                        idiomas);
     if (idiomaSeleccionado == "Inglés"){
-        traduccion.load("en_EN.qm");
+        cout<< "Cargando en Inglés."<<endl;
+        traduccion.load(":/en_EN.qm");
         app.installTranslator(&traduccion);
     }
 
