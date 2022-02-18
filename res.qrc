@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>imagenes/agregar.png</file>
+        <file>imagenes/finalizar.png</file>
+        <file>imagenes/logout.png</file>
+    </qresource>
+</RCC>

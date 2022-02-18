@@ -36,6 +36,7 @@ int main(int argc, char *argv[]) {
         return exit;
     }
 
+    // El archivo con los datos se guarda automáticamente en build\debug cuando el programa se cierra.
     cout << "El archivo se estará guardando en: "<<app.applicationDirPath().toStdString()<< endl;
     string dataPath = app.applicationDirPath().toStdString() + "/data.csv";
 

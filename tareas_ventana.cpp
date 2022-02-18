@@ -42,6 +42,32 @@ void Tareas::updateUI() {
             }
         }
     }
+
+    if (tareas.isEmpty()) {
+        return;
+    }
+
+    string dataPath = "data.csv";
+    QFile archivo(QString::fromStdString(dataPath));
+
+    if(archivo.open(QIODevice::WriteOnly|QIODevice::Text)){
+        QTextStream datosArchivo(&archivo);
+        for (int i = 0; i < tareas.size(); i++ ){
+            datosArchivo<<tareas.at(i)->getIndice();
+            datosArchivo<<";";
+            datosArchivo<<tareas.at(i)->getNombre();
+            datosArchivo<<";";
+            datosArchivo<<tareas.at(i)->getFecha().getFecha();
+            datosArchivo<<";";
+            datosArchivo<<tareas.at(i)->getPrioridad();
+            datosArchivo<<";";
+            datosArchivo<<tareas.at(i)->getTipo();
+            datosArchivo<<";";
+            datosArchivo<<tareas.at(i)->getTerminada();
+            datosArchivo<<"\n";
+        }
+    }
+    archivo.close();
 }
 
 void Tareas::pasarTareaAlUI(int indice, Tarea *tarea) {

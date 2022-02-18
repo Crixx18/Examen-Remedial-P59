@@ -20,3 +20,6 @@ HEADERS += \
 FORMS += \
     agregar_tarea.ui \
     tareas_ventana.ui
+
+RESOURCES += \
+    res.qrc
