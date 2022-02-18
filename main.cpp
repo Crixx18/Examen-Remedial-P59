@@ -5,6 +5,7 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QInputDialog>
+#include <QString>
 
 using namespace std;
 
@@ -27,5 +28,37 @@ int main(int argc, char *argv[]) {
 
     Tareas tareas;
     tareas.show();
-    return app.exec();
+    int exit = app.exec();
+
+    cout<< "Llegando al final"<<endl;
+
+    if (tareas.tareas.isEmpty()) {
+        return exit;
+    }
+
+    cout << "El archivo se estará guardando en: "<<app.applicationDirPath().toStdString()<< endl;
+    string dataPath = app.applicationDirPath().toStdString() + "/data.csv";
+
+    QFile archivo(QString::fromStdString(dataPath));
+
+    if(archivo.open(QIODevice::WriteOnly|QIODevice::Text)){
+        QTextStream datosArchivo(&archivo);
+        for (int i = 0; i < tareas.tareas.size(); i++ ){
+            datosArchivo<<tareas.tareas.at(i)->getIndice();
+            datosArchivo<<";";
+            datosArchivo<<tareas.tareas.at(i)->getNombre();
+            datosArchivo<<";";
+            datosArchivo<<tareas.tareas.at(i)->getFecha().getFecha();
+            datosArchivo<<";";
+            datosArchivo<<tareas.tareas.at(i)->getPrioridad();
+            datosArchivo<<";";
+            datosArchivo<<tareas.tareas.at(i)->getTipo();
+            datosArchivo<<";";
+            datosArchivo<<tareas.tareas.at(i)->getTerminada();
+            datosArchivo<<"\n";
+        }
+    }
+    archivo.close();
+
+    return exit;
 }
