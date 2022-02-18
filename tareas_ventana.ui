@@ -14,7 +14,7 @@
    <string>Tareas pendientes</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../Salarios/Recursos.qrc">
+   <iconset>
     <normaloff>:/Recursos/salary.png</normaloff>:/Recursos/salary.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -37,7 +37,7 @@
        </column>
        <column>
         <property name="text">
-         <string>Número</string>
+         <string>N° de tarea</string>
         </property>
        </column>
        <column>

@@ -5,6 +5,9 @@
 #include <QFile>
 #include <QDebug>
 #include <QMessageBox>
+#include <QTableWidgetItem>
+
+#include <tarea.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Tareas; }
@@ -18,6 +21,9 @@ public:
     Tareas(QWidget *parent = nullptr);
     ~Tareas();
     void updateUI();
+    void pasarTareaAlUI(int indice, Tarea *tarea);
+    QTableWidgetItem *buildItem(std::string data);
+    QList<Tarea*> tareas;
 
 private slots:
     void on_actionAgregar_triggered();
@@ -27,7 +33,6 @@ private slots:
 
 private:
     Ui::Tareas *ui;
-    void clean();
 };
 
 #endif // LOGIN_H

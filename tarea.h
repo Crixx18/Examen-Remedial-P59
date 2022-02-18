@@ -9,7 +9,7 @@ class Tarea : public QObject {
 
 public:
     explicit Tarea(QObject *parent = nullptr);
-    Tarea(int indice, const QString &nombre, const Fecha fecha, char prioridad, const QString &tipo);
+    Tarea(int indice, const QString &nombre, const Fecha &fecha, char prioridad, const QString &tipo);
 
     int getIndice() const;
     void setIndice(int newIndice);

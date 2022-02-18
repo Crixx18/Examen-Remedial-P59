@@ -1,8 +1,9 @@
 #include "tarea.h"
 
+#include "fecha.h"
 #include <QString>
 
-Tarea::Tarea(int indice, const QString &nombre, const Fecha fecha, char prioridad, const QString &tipo) {
+Tarea::Tarea(int indice, const QString &nombre, const Fecha &fecha, char prioridad, const QString &tipo) {
     this->indice = indice;
     this->nombre = nombre;
     this->fecha = fecha;
