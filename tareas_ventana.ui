@@ -90,8 +90,7 @@
      <string>&amp;Acciones</string>
     </property>
     <addaction name="actionAgregar"/>
-    <addaction name="actionEliminar"/>
-    <addaction name="actionModificar"/>
+    <addaction name="actionFinalizar"/>
     <addaction name="separator"/>
     <addaction name="actionSalir"/>
     <addaction name="separator"/>
@@ -107,9 +106,9 @@
     <string>Ctrl+A</string>
    </property>
   </action>
-  <action name="actionEliminar">
+  <action name="actionFinalizar">
    <property name="text">
-    <string>Eliminar tarea</string>
+    <string>Finalizar tarea</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+D</string>

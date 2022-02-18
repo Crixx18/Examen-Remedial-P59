@@ -34,9 +34,9 @@ void AgregarTarea::on_actionAgregar_released() {
         messageBox.setFixedSize(500, 200);
         return;
     }
-    if (tipo_de_tarea.length() > 16) {
+    if (tipo_de_tarea.length() > 32) {
         QMessageBox messageBox;
-        messageBox.critical(0, "Error", "El tipo no puede tener más de 16 caracteres.");
+        messageBox.critical(0, "Error", "El tipo no puede tener más de 32 caracteres.");
         messageBox.setFixedSize(500, 200);
         return;
     }

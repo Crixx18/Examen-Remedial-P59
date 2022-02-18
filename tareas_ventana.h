@@ -27,8 +27,7 @@ public:
 
 private slots:
     void on_actionAgregar_triggered();
-    void on_actionEliminar_triggered();
-    void on_actionModificar_triggered();
+    void on_actionFinalizar_triggered();
     void on_actionSalir_triggered();
 
 private:
